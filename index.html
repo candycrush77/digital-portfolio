@@ -1,0 +1,68 @@
+e<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SHOPING CART</h1>
+        <div class="cart-icon">
+            <span class="cart-count">0</span>
+            <img src="C:\kishore\images.png" alt="Cart">
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <h2>Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="C:\kishore\product1.jpg.jpg" alt="iphone 13">
+                    <h3>i phone 13</h3>
+                    <p>$50,000</p>
+                    <button onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="C:\kishore\product2.jpg.jpg" alt="iphone 16">
+                    <h3>i phone 16</h3>
+                    <p>$75,000</p>
+                    <button onclick="addToCart(2)">Add to Cart</button>
+                </div>
+		<div class="product-card">
+                    <img src="C:\kishore\product1.jpg.jpg" alt="iphone 16">
+                    <h3>i phone 14</h3>
+                    <p>$63,000</p>
+                    <button onclick="addToCart(1)">Add to Cart</button>
+                </div>
+		<div class="product-card">
+                    <img src="C:\kishore\product1.jpg.jpg" alt="iphone 16">
+                    <h3>i phone 15</h3>
+                    <p>$65,000</p>
+                    <button onclick="addToCart(2)">Add to Cart</button>
+                </div>
+		<div class="product-card">
+                    <img src="C:\kishore\airpods.jpg" alt="iphone 16">
+                    <h3>Air pods pro(gen 2)</h3>
+                    <p>$6,000</p>
+                    <button onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: $<span id="total">0</span></p>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
