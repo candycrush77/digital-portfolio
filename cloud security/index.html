@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM Cloud Security Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IBM Cloud Security Dashboard</h1>
+            <div class="user-info">
+                <span id="userName">Admin User</span>
+                <span class="status-badge">Authenticated</span>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="security-card">
+                <h2>Security Status</h2>
+                <div class="status-indicator green"></div>
+                <p>All Systems Operational</p>
+                <div class="metrics">
+                    <div class="metric">
+                        <span>Threats Blocked</span>
+                        <strong>247</strong>
+                    </div>
+                    <div class="metric">
+                        <span>Active Users</span>
+                        <strong>18</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-card">
+                <h2>Access Control</h2>
+                <div class="access-controls">
+                    <button onclick="toggleMFA()">Enable MFA</button>
+                    <button onclick="rotateKeys()">Rotate Keys</button>
+                </div>
+                <div class="access-log">
+                    <h3>Recent Access Logs</h3>
+                    <ul id="accessLogs">
+                        <!-- Logs will be populated by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="security-card">
+                <h2>Encryption Status</h2>
+                <div class="encryption-status">
+                    <div class="status-item">
+                        <span>Data at Rest</span>
+                        <div class="status-badge green">Encrypted</div>
+                    </div>
+                    <div class="status-item">
+                        <span>Data in Transit</span>
+                        <div class="status-badge green">Encrypted</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-card">
+                <h2>Security Alerts</h2>
+                <div class="alerts" id="securityAlerts">
+                    <!-- Alerts will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

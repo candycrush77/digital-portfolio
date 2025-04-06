@@ -1,0 +1,133 @@
+:root {
+    --ibm-blue: #0f62fe;
+    --ibm-gray: #4d5358;
+    --success-green: #24a148;
+    --warning-yellow: #f1c21b;
+    --danger-red: #da1e28;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.security-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.status-indicator.green {
+    background-color: var(--success-green);
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric strong {
+    display: block;
+    font-size: 24px;
+    color: var(--ibm-blue);
+}
+
+.access-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--ibm-blue);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.access-log ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.access-log li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.status-badge {
+    background-color: var(--success-green);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.alerts {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.algert-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+.alert-item.high {
+    background-color: rgba(218, 30, 40, 0.1);
+    border-left: 4px solid var(--danger-red);
+}
+
+.alert-item.medium {
+    background-color: rgba(241, 194, 27, 0.1);
+    border-left: 4px solid var(--warning-yellow);
+}gg
